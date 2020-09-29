@@ -1,7 +1,7 @@
 import gallery from './gallery-items.js';
 
 const refLightBox = document.querySelector('.lightbox');
-const refPopupImg = document.querySelector('.lightbox___image');
+const refPopupImg = document.querySelector('.lightbox__image');
 const refCloseBtn = document.querySelector(
   'button[data-action=close-lightbox]',
 );
@@ -27,8 +27,8 @@ function createPhotoMarkup(gallery) {
   >
     <img
       class="gallery__image"
-      src="${preview}"
-      data-source="${original}"
+      src="${original}"
+      data-source="${preview}"
       alt="${description}"
     />
   </a>
@@ -61,7 +61,6 @@ const closeByKey = event => {
 };
 
 listPhoto.addEventListener('click', openPopUp);
-
 refCloseBtn.addEventListener('click', closePopUp);
 refOverlay.addEventListener('click', closePopUp);
 document.addEventListener('keydown', closeByKey);
